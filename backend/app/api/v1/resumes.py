@@ -12,7 +12,7 @@ from app.schemas import resume as resume_schema
 
 router = APIRouter()
 
-UPLOAD_DIR = "/app/uploads/resumes"
+UPLOAD_DIR = "uploads/resumes"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 @router.post("/", response_model=resume_schema.Resume)
